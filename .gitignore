@@ -1,4 +1,6 @@
 # Byte-compiled / optimized / DLL files
+docker_pg_data
+
 __pycache__/
 *.py[cod]
 *$py.class

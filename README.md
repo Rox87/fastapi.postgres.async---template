@@ -1,3 +1,25 @@
+# My notes
+https://github.com/reinhud/async-fastapi-postgres-template
+
+.env
+POSTGRES_CONTAINER_PORT=5432
+POSTGRES_TEST_CONTAINER_PORT=6543
+POSTGRES_USER="postgres"
+POSTGRES_PASSWORD="postgres"
+POSTGRES_SERVER="postgres_container" 
+POSTGRES_PORT=5432
+POSTGRES_DB="postgres"
+PGADMIN_DEFAULT_EMAIL="pgadmin4@pgadmin.org"
+PGADMIN_DEFAULT_PASSWORD="postgres"
+PGADMIN_LISTEN_PORT=80
+
+
+docker compose up db -d
+docker-compose run --name init fastapi_server alembic stamp head
+docker rm init
+docker compose up -d
+
+
 # Async Web REST API with FastAPI + SQLAlchemy 2.0 Postgres ORM + Docker + Pytest + Alembic
 
 This is a template for a simple Web REST API using FastAPI with an async Postgres database.
