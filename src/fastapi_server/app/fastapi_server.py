@@ -28,7 +28,7 @@ def get_app() -> FastAPI:
     """Instanciating and setting up FastAPI application."""
     settings = get_app_settings()
 
-    app = FastAPI(**settings.fastapi_kwargs)
+    app = FastAPI()
 
     add_middleware(app)
 
